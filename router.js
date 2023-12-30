@@ -1,6 +1,8 @@
+//all router configuration 
 const express = require('express');
 const router = express.Router();
 
+//controllers imports
 const {registerUser} = require("./controllers/registerUser");
 const {getUser} = require("./controllers/getUser");
 const {login} = require("./controllers/login");
@@ -9,7 +11,7 @@ const {resetPassword}  = require("./controllers/resetPassword");
 const {  fetchAllUsers } = require('./controllers/fetchAllUsers');
 const { deleteUser } = require('./controllers/deleteUser');
 
-
+//routes
 router.post('/register', registerUser);
 router.get('/getusers',getUser);
 router.post('/login',login);

@@ -1,3 +1,4 @@
+// OTP Schema 
 const mongoose = require("mongoose");
 const nodemailer = require("nodemailer");
 //creating the schema :
@@ -17,7 +18,7 @@ const otpSchema = new mongoose.Schema({
     }
 });
 
-//lekin iss ke entry me save hone se phle meko otp bhejna hai.. To code h ye :
+// sent otp mail before saving the otp to the database
 otpSchema.pre("save",async function(next){
     try{
         const transporter = new nodemailer.createTransport({

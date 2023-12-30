@@ -1,8 +1,9 @@
-const express = require("express");
+//Get the all users in the db
 const Schema = require("../models/schema");
 
 exports.getUser = async(req,res) =>{
     try{
+        //fetch the users 
         const userData = await Schema.find();
         if(!userData){
             console.log("No data found");
